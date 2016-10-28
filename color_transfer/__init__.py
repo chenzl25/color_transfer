@@ -40,9 +40,9 @@ def color_transfer(source, target):
 	b -= bMeanTar
 
 	# scale by the standard deviations
-	l = (lStdTar / lStdSrc) * l
-	a = (aStdTar / aStdSrc) * a
-	b = (bStdTar / bStdSrc) * b
+	l = (lStdSrc / lStdTar) * l
+	a = (aStdSrc / aStdTar) * a
+	b = (bStdSrc / bStdTar) * b
 
 	# add in the source mean
 	l += lMeanSrc
